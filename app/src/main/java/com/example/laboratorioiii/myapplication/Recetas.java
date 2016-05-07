@@ -1,7 +1,13 @@
 package com.example.laboratorioiii.myapplication;
 
-/**
- * Created by Ivan on 6/5/2016.
- */
-public class Recetas {
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class Recetas extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_recetas);
+    }
 }
