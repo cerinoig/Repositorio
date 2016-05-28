@@ -1,63 +1,35 @@
 package com.example.laboratorioiii.myapplication;
 
 import android.content.Intent;
+import android.net.Uri;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
 
-    private LinearLayout recetas;
-    private LinearLayout quecocino;
-    private LinearLayout compartirReceta;
-    private LinearLayout info;
+//public class MainActivity extends AppCompatActivity {
 
-
+public class MainActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recetas = (LinearLayout) findViewById(R.id.btn1);
-        quecocino = (LinearLayout) findViewById(R.id.btn2);
-        compartirReceta = (LinearLayout) findViewById(R.id.btn3);
-        info = (LinearLayout) findViewById(R.id.btn4);
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 
-        recetas.setOnClickListener(new View.OnClickListener() {
+        ft.replace(R.id.LinearMain,new  BlankFragment());
 
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(v.getContext(), Recetas.class);
-                startActivity(intent);
-            }
+        ft.addToBackStack(null);
 
-        });
-
-        quecocino.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-
-                intent.setClass(v.getContext(), Recetas.class);
-                startActivity(intent);
-            }
-
-        });
-
-        compartirReceta.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-
-                intent.setClass(v.getContext(), Recetas.class);
-                startActivity(intent);
-            }
+        ft.commit();
 
 
-        });
     }
 }
