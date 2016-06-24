@@ -90,7 +90,14 @@
             android:background="@android:color/holo_purple"/>
 
     </LinearLayout>
-
+    <EditText
+        android:layout_width="110dp"
+        android:layout_height="30dp"
+        android:id="@+id/editText"/>
+     <Button
+         android:layout_width="110dp"
+         android:layout_height="30dp"
+         android:id="@+id/button"/>
     </LinearLayout>
 
 </FrameLayout>
