@@ -29,4 +29,17 @@ public class MainActivity extends FragmentActivity {
 
 
     }
+
+    public void cambiarFragment(Fragment fr){
+
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+
+        ft.replace(R.id.LinearMain,fr);
+
+        ft.commit();
+
+
+    }
+
+
 }

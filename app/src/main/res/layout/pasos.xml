@@ -1,0 +1,73 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.laboratorioiii.myapplication.Pasos">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/LinearingresarPasos">
+        <!-- TODO: Update blank fragment layout -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pasos"
+            android:textSize="40dp"
+            android:textAlignment="center"
+            android:layout_margin="20dp"
+            android:textColor="@android:color/holo_purple"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/darker_gray"
+            android:hint="Escriba aquí paso 1"
+            android:textSize="40dp"
+
+            android:id="@+id/ingresePaso"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/darker_gray"
+            android:hint="Escriba aquí paso 2"
+            android:textSize="40dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/ingresePaso2"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/darker_gray"
+            android:hint="Escriba aquí paso 3"
+            android:textSize="40dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/ingresePaso3"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/darker_gray"
+            android:hint="Escriba aquí paso 4"
+            android:textSize="40dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/ingresePaso4"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/darker_gray"
+            android:hint="Escriba aquí paso 5"
+            android:textSize="40dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/ingresePaso5"
+            />
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

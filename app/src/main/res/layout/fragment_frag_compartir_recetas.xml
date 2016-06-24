@@ -8,7 +8,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:id="@+id/LinearCompartirRecetas"
+        android:background="@android:color/background_light">
 
     <!-- TODO: Update blank fragment layout -->
 <LinearLayout
@@ -57,6 +59,7 @@
             android:layout_marginRight="15dp"
             android:layout_marginLeft="10dp"
             android:layout_margin="10dp"
+            android:id="@+id/pasos"
             />
             <TextView
                 android:layout_width="wrap_content"
@@ -66,6 +69,7 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="30dp"
+                android:id="@+id/Ingredientes"
                 />
         </LinearLayout>
 
