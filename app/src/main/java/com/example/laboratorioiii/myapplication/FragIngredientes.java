@@ -1,4 +1,4 @@
-package com.example.laboratorioiii.myapplication.Clases;
+package com.example.laboratorioiii.myapplication;
 
 
 import android.os.Bundle;

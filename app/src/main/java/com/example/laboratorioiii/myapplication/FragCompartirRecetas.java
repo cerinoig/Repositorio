@@ -23,8 +23,6 @@ public class FragCompartirRecetas extends Fragment {
     private TextView ingresarIngredientes;
 
 
-
-
     public FragCompartirRecetas() {
         // Required empty public constructor
     }
@@ -44,6 +42,7 @@ public class FragCompartirRecetas extends Fragment {
         ingresarTitulo = (TextView) view.findViewById(R.id.ingresarTitulo);
         ingresarPasos = (TextView) view.findViewById(R.id.pasos);
         ingresarIngredientes = (TextView) view.findViewById(R.id.Ingredientes);
+
 
         ingresarTitulo.setOnClickListener(new View.OnClickListener() {
 
@@ -73,7 +72,7 @@ public class FragCompartirRecetas extends Fragment {
 
             @Override
             public void onClick(View v) {
-                ((MainActivity) getActivity()).cambiarFragment(new ());
+                ((MainActivity) getActivity()).cambiarFragment(new FragCompartirRecetas());
 
             }
 

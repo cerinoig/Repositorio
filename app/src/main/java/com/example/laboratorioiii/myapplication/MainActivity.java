@@ -14,9 +14,14 @@ import android.widget.LinearLayout;
 //public class MainActivity extends AppCompatActivity {
 
 public class MainActivity extends FragmentActivity {
+
+    public  Recetas receta ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        receta = new Recetas();
+
         setContentView(R.layout.activity_main);
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
@@ -41,5 +46,11 @@ public class MainActivity extends FragmentActivity {
 
     }
 
+    public Recetas getReceta() {
+        return receta;
+    }
 
+    public void setReceta(Recetas receta) {
+        this.receta = receta;
+    }
 }

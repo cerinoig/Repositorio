@@ -15,6 +15,7 @@ public class Receta {
 
     private String autor;
 
+
     public String getTitulo() {
         return titulo;
     }

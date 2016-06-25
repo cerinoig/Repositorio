@@ -26,8 +26,7 @@
             android:textColorHint="@android:color/darker_gray"
             android:hint="Escriba aquí paso 1"
             android:textSize="40dp"
-
-            android:id="@+id/ingresePaso"
+            android:id="@+id/ingresePaso1"
             />
         <EditText
             android:layout_width="match_parent"
@@ -66,6 +65,12 @@
             android:id="@+id/ingresePaso5"
             />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:text="Continuar"
+            android:id="@+id/ContinuarPasos"/>
 
 
     </LinearLayout>
