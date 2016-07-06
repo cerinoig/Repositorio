@@ -9,8 +9,14 @@ import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import com.google.firebase.database.*;
+import com.google.firebase.database.DatabaseReference;
+import com.example.laboratorioiii.myapplication.Clases.Receta;
+import java.util.HashMap;
+import java.util.Map;
 
 
 /**
@@ -19,6 +25,9 @@ import android.widget.LinearLayout;
 public class PoneTuTitulo extends Fragment {
         private EditText ingreseTitulo;
         private EditText ingreseAutor;
+        private Button BotonGuardar;
+        DatabaseReference mDatabase;
+        DatabaseReference mPostsReference;
 
     public PoneTuTitulo() {
         // Required empty public constructor
@@ -38,15 +47,23 @@ public class PoneTuTitulo extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        mPostsReference = mDatabase.child("posts");
+
         ingreseTitulo = (EditText) view.findViewById(R.id.ingreseTitulo);
 
         ingreseAutor = (EditText) view.findViewById(R.id.ingreseAutor);
 
-        ingreseTitulo.setOnClickListener(new View.OnClickListener() {
+        BotonGuardar = (Button)   view.findViewById(R.id.ContinuarTitulo);
+
+
+        BotonGuardar.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                ingreseTitulo.getText();
+
+                ((MainActivity) getActivity()).receta.setTitulo(ingreseTitulo.getText().toString());
+                ((MainActivity) getActivity()).receta.setAutor(ingreseAutor.getText().toString());
 
 
             }
@@ -54,19 +71,28 @@ public class PoneTuTitulo extends Fragment {
 
         });
 
-        ingreseAutor.setOnClickListener(new View.OnClickListener() {
-
+        mPostsReference.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onClick(View v) {
-                ingreseAutor.getText();
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
 
+                /*  String value = dataSnapshot.getValue(String.class);
+                 tv.setText(value);*/
 
             }
 
-
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+            }
         });
 
 
 
     }
+
+
+
+
 }

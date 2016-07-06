@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:textColorHint="@android:color/darker_gray"
             android:hint="Ingrediente 1"
-            android:textSize="40dp"
+            android:textSize="20dp"
 
             android:id="@+id/IngresoIngrediente1"
             />
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:textColorHint="@android:color/darker_gray"
             android:hint="Ingrediente 2"
-            android:textSize="40dp"
+            android:textSize="20dp"
             android:layout_marginTop="10dp"
             android:id="@+id/IngresoIngrediente2"
             />
@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:textColorHint="@android:color/darker_gray"
             android:hint="Ingrediente  3"
-            android:textSize="40dp"
+            android:textSize="20dp"
             android:layout_marginTop="10dp"
             android:id="@+id/IngresoIngrediente3"
             />
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:textColorHint="@android:color/darker_gray"
             android:hint="Ingrediente  4"
-            android:textSize="40dp"
+            android:textSize="20dp"
             android:layout_marginTop="10dp"
             android:id="@+id/IngresoIngrediente4"
             />
@@ -68,15 +68,35 @@
             android:layout_height="wrap_content"
             android:textColorHint="@android:color/darker_gray"
             android:hint="Ingrediente  5"
-            android:textSize="40dp"
+            android:textSize="20dp"
             android:layout_marginTop="10dp"
             android:id="@+id/IngresoIngrediente5"
             />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/darker_gray"
+            android:hint="Ingrediente  6"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/IngresoIngrediente6"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/darker_gray"
+            android:hint="Ingrediente  7"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/IngresoIngrediente7"
+            />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="150dp"
-            android:text="Continuar"/>
+            android:text="Continuar"
+            android:id="@+id/ContinuarIngredientes"/>
 
 
     </LinearLayout>

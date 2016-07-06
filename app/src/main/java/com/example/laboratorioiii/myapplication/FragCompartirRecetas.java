@@ -12,6 +12,9 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,7 +24,8 @@ public class FragCompartirRecetas extends Fragment {
     private TextView ingresarTitulo;
     private TextView ingresarPasos;
     private TextView ingresarIngredientes;
-
+    DatabaseReference mDatabase;
+    DatabaseReference mPostsReference;
 
     public FragCompartirRecetas() {
         // Required empty public constructor
@@ -43,6 +47,8 @@ public class FragCompartirRecetas extends Fragment {
         ingresarPasos = (TextView) view.findViewById(R.id.pasos);
         ingresarIngredientes = (TextView) view.findViewById(R.id.Ingredientes);
 
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        mPostsReference = mDatabase.child("posts");
 
         ingresarTitulo.setOnClickListener(new View.OnClickListener() {
 

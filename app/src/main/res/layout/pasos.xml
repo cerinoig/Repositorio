@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:textColorHint="@android:color/darker_gray"
             android:hint="Escriba aquí paso 1"
-            android:textSize="40dp"
+            android:textSize="20dp"
             android:id="@+id/ingresePaso1"
             />
         <EditText
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:textColorHint="@android:color/darker_gray"
             android:hint="Escriba aquí paso 2"
-            android:textSize="40dp"
+            android:textSize="20dp"
             android:layout_marginTop="10dp"
             android:id="@+id/ingresePaso2"
             />
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:textColorHint="@android:color/darker_gray"
             android:hint="Escriba aquí paso 3"
-            android:textSize="40dp"
+            android:textSize="20dp"
             android:layout_marginTop="10dp"
             android:id="@+id/ingresePaso3"
             />
@@ -51,18 +51,36 @@
             android:layout_height="wrap_content"
             android:textColorHint="@android:color/darker_gray"
             android:hint="Escriba aquí paso 4"
-            android:textSize="40dp"
+            android:textSize="20dp"
             android:layout_marginTop="10dp"
             android:id="@+id/ingresePaso4"
+            />
+        <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@android:color/darker_gray"
+        android:hint="Escriba aquí paso 5"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/ingresePaso5"
+        />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/darker_gray"
+            android:hint="Escriba aquí paso 6"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/ingresePaso6"
             />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@android:color/darker_gray"
-            android:hint="Escriba aquí paso 5"
-            android:textSize="40dp"
+            android:hint="Escriba aquí paso 7"
+            android:textSize="20dp"
             android:layout_marginTop="10dp"
-            android:id="@+id/ingresePaso5"
+            android:id="@+id/ingresePaso7"
             />
 
         <Button
