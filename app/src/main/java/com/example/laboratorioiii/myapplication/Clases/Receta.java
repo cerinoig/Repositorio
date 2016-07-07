@@ -71,8 +71,8 @@ public class Receta {
         HashMap<String, Object> postValues = new HashMap<>();
         postValues.put("titulo", titulo);
         postValues.put("autor", autor);
-        postValues.put("autor", pasos);
-        postValues.put("autor", ingredientes);
+        postValues.put("pasos", pasos);
+        postValues.put("ingredientes", ingredientes);
 
         return postValues;
     }

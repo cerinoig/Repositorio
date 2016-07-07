@@ -69,10 +69,8 @@ public class BlankFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
 
-                intent.setClass(v.getContext(), Recetas.class);
-                startActivity(intent);
+                ((MainActivity) getActivity()).cambiarSavingFragment(new FragCompartirRecetas());
             }
 
 

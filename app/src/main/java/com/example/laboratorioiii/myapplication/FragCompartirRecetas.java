@@ -3,18 +3,14 @@ package com.example.laboratorioiii.myapplication;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.TextView;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,8 +20,6 @@ public class FragCompartirRecetas extends Fragment {
     private TextView ingresarTitulo;
     private TextView ingresarPasos;
     private TextView ingresarIngredientes;
-    DatabaseReference mDatabase;
-    DatabaseReference mPostsReference;
 
     public FragCompartirRecetas() {
         // Required empty public constructor
@@ -47,15 +41,15 @@ public class FragCompartirRecetas extends Fragment {
         ingresarPasos = (TextView) view.findViewById(R.id.pasos);
         ingresarIngredientes = (TextView) view.findViewById(R.id.Ingredientes);
 
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-        mPostsReference = mDatabase.child("posts");
+        FloatingActionButton btn = (FloatingActionButton) view.findViewById(R.id.CargarAFirebase);
+
 
         ingresarTitulo.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
-        ((MainActivity) getActivity()).cambiarFragment(new PoneTuTitulo());
+        ((MainActivity) getActivity()).cambiarSavingFragment(new PoneTuTitulo());
 
             }
 
@@ -67,7 +61,7 @@ public class FragCompartirRecetas extends Fragment {
             @Override
             public void onClick(View v) {
 
-                ((MainActivity) getActivity()).cambiarFragment(new Pasos());
+                ((MainActivity) getActivity()).cambiarSavingFragment(new Pasos());
 
             }
 
@@ -78,13 +72,30 @@ public class FragCompartirRecetas extends Fragment {
 
             @Override
             public void onClick(View v) {
-                ((MainActivity) getActivity()).cambiarFragment(new FragCompartirRecetas());
+                ((MainActivity) getActivity()).cambiarSavingFragment(new FragIngredientes());
 
             }
 
 
         });
 
+
+        btn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                List<String> pasos = ((MainActivity)getActivity()).receta.getPasos();
+                List<String> ingredientes = ((MainActivity)getActivity()).receta.getIngredientes();
+                String titulo = ((MainActivity)getActivity()).receta.getTitulo();
+                String autor = ((MainActivity)getActivity()).receta.getAutor();
+
+                ((MainActivity) getActivity()).writeNewPost(titulo,autor,pasos,ingredientes);
+
+            }
+
+
+        });
 
 
     }

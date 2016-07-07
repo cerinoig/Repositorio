@@ -4,12 +4,12 @@ package com.example.laboratorioiii.myapplication;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import java.util.List;
 
@@ -19,7 +19,7 @@ import java.util.List;
  */
 public class Pasos extends Fragment {
 
-    private Button continuarPaso;
+    private Button   continuarPaso;
     private EditText paso1;
     private EditText paso2;
     private EditText paso3;
@@ -64,15 +64,59 @@ public class Pasos extends Fragment {
             @Override
             public void onClick(View v) {
 
+                String paso1Validado = paso1.getText().toString();
+                String paso2Validado = paso2.getText().toString();
+                String paso3Validado = paso3.getText().toString();
+                String paso4Validado = paso4.getText().toString();;
+                String paso5Validado = paso5.getText().toString();;
+                String paso6Validado = paso6.getText().toString();;
+                String paso7Validado = paso7.getText().toString();;
+
                 List<String> pasos = null;
 
-                pasos.add(paso1.getText().toString());
-                pasos.add(paso2.getText().toString());
-                pasos.add(paso3.getText().toString());
-                pasos.add(paso4.getText().toString());
-                pasos.add(paso5.getText().toString());
-                pasos.add(paso6.getText().toString());
-                pasos.add(paso7.getText().toString());
+                if (TextUtils.isEmpty(paso1Validado)) {
+                    paso1.setError("Ingrese al menos el primer paso");
+                } else if (pasos != null) {
+                    pasos.add(paso1Validado);
+                }
+
+                if (TextUtils.isEmpty(paso2Validado)) {
+                } else {
+                    if (pasos != null) {
+                        pasos.add(paso2Validado);
+                    }
+                }
+
+                if(!TextUtils.isEmpty(paso3Validado)){
+                    if (pasos != null) {
+                        pasos.add(paso3Validado);
+                    }
+                }
+
+                if(!TextUtils.isEmpty(paso4Validado)){
+                    if (pasos != null) {
+                        pasos.add(paso4Validado);
+                    }
+                }
+
+                if(!TextUtils.isEmpty(paso5Validado)){
+                    if (pasos != null) {
+                        pasos.add(paso5Validado);
+                    }
+                }
+
+                if(!TextUtils.isEmpty(paso6Validado)){
+                    if (pasos != null) {
+                        pasos.add(paso6Validado);
+                    }
+                }
+
+                if(!TextUtils.isEmpty(paso7Validado)){
+                    if (pasos != null) {
+                        pasos.add(paso7Validado);
+                    }
+                }
+
 
                 ((MainActivity)getActivity()).receta.setPasos(pasos);
 
