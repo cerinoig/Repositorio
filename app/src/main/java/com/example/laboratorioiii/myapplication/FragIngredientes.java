@@ -113,7 +113,6 @@ public class FragIngredientes extends Fragment {
 
                                 ingredientes.add(ingredienteValidado7);
 
-
                     }
                         ((MainActivity) getActivity()).receta.setIngredientes(ingredientes);
 
