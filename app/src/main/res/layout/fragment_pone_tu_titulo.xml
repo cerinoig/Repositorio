@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:text="Guardar y Continuar"
+            android:text="Guardar"
             android:layout_gravity="center"
             android:id="@+id/ContinuarTitulo" />
 

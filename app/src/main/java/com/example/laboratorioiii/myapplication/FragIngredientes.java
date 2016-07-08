@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -58,7 +59,7 @@ public class FragIngredientes extends Fragment {
             @Override
             public void onClick(View v) {
 
-                List<String> ingredientes = null;
+                List<String> ingredientes = new ArrayList<>();
 
                 String ingredienteValidado1 = ingrediente1.getText().toString();
                 String ingredienteValidado2 = ingrediente2.getText().toString();
@@ -71,56 +72,58 @@ public class FragIngredientes extends Fragment {
                 if (TextUtils.isEmpty(ingredienteValidado1)) {
                     ingrediente1.setError("Ingrese al menos el primer paso");
                 } else {
-                        if (ingredientes != null) {
+
                             ingredientes.add(ingredienteValidado1);
-                        }
                 }
 
+                if (!TextUtils.isEmpty(ingredienteValidado2)) {
 
-
-                if (TextUtils.isEmpty(ingredienteValidado1)) {
-
-                        if (ingredientes != null) {
                             ingredientes.add(ingredienteValidado2);
-                        }
                 }
 
-                if (TextUtils.isEmpty(ingredienteValidado1)) {
+                if (!TextUtils.isEmpty(ingredienteValidado3)) {
 
-                        if (ingredientes != null) {
                             ingredientes.add(ingredienteValidado3);
-                        }
+
 
                 }
-                if (TextUtils.isEmpty(ingredienteValidado1)) {
+                if (!TextUtils.isEmpty(ingredienteValidado4)) {
 
-                        if (ingredientes != null) {
+
                             ingredientes.add(ingredienteValidado4);
-                        }
+
 
                 }
-                if (TextUtils.isEmpty(ingredienteValidado5)) {
+                if (!TextUtils.isEmpty(ingredienteValidado5)) {
 
-                        if (ingredientes != null) {
+
                             ingredientes.add(ingredienteValidado5);
-                        }
+
 
                 }
-                if (TextUtils.isEmpty(ingredienteValidado6)) {
+                if (!TextUtils.isEmpty(ingredienteValidado6)) {
 
-                        if (ingredientes != null) {
+
                             ingredientes.add(ingredienteValidado6);
-                        }
+
 
                 }
-                    if (TextUtils.isEmpty(ingredienteValidado7)) {
+                    if (!TextUtils.isEmpty(ingredienteValidado7)) {
 
-                            if (ingredientes != null) {
+
                                 ingredientes.add(ingredienteValidado7);
-                            }
+
 
                     }
-                        ((MainActivity) getActivity()).receta.setPasos(ingredientes);
+                        ((MainActivity) getActivity()).receta.setIngredientes(ingredientes);
+
+                ingrediente1.setText("");
+                ingrediente2.setText("");
+                ingrediente3.setText("");
+                ingrediente4.setText("");
+                ingrediente5.setText("");
+                ingrediente6.setText("");
+                ingrediente7.setText("");
 
 
             }

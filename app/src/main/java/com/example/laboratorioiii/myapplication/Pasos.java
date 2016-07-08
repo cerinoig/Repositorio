@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -72,54 +73,58 @@ public class Pasos extends Fragment {
                 String paso6Validado = paso6.getText().toString();;
                 String paso7Validado = paso7.getText().toString();;
 
-                List<String> pasos = null;
+                List<String> pasos = new ArrayList<>();
 
                 if (TextUtils.isEmpty(paso1Validado)) {
                     paso1.setError("Ingrese al menos el primer paso");
-                } else if (pasos != null) {
+                } else  {
                     pasos.add(paso1Validado);
                 }
 
-                if (TextUtils.isEmpty(paso2Validado)) {
-                } else {
-                    if (pasos != null) {
+                if (!TextUtils.isEmpty(paso2Validado)) {
+
                         pasos.add(paso2Validado);
-                    }
+
                 }
 
                 if(!TextUtils.isEmpty(paso3Validado)){
-                    if (pasos != null) {
+
                         pasos.add(paso3Validado);
-                    }
+
                 }
 
                 if(!TextUtils.isEmpty(paso4Validado)){
-                    if (pasos != null) {
+
                         pasos.add(paso4Validado);
-                    }
+
                 }
 
                 if(!TextUtils.isEmpty(paso5Validado)){
-                    if (pasos != null) {
+
                         pasos.add(paso5Validado);
-                    }
+
                 }
 
                 if(!TextUtils.isEmpty(paso6Validado)){
-                    if (pasos != null) {
+
                         pasos.add(paso6Validado);
-                    }
                 }
 
                 if(!TextUtils.isEmpty(paso7Validado)){
-                    if (pasos != null) {
                         pasos.add(paso7Validado);
-                    }
                 }
 
 
                 ((MainActivity)getActivity()).receta.setPasos(pasos);
 
+
+                paso1.setText("");
+                paso2.setText("");
+                paso3.setText("");
+                paso4.setText("");
+                paso5.setText("");
+                paso6.setText("");
+                paso7.setText("");
 
             }
 

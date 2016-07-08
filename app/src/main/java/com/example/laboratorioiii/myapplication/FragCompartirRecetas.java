@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.List;
-
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -20,6 +19,7 @@ public class FragCompartirRecetas extends Fragment {
     private TextView ingresarTitulo;
     private TextView ingresarPasos;
     private TextView ingresarIngredientes;
+    boolean click = false;
 
     public FragCompartirRecetas() {
         // Required empty public constructor
@@ -85,14 +85,16 @@ public class FragCompartirRecetas extends Fragment {
             @Override
             public void onClick(View v) {
 
-                List<String> pasos = ((MainActivity)getActivity()).receta.getPasos();
-                List<String> ingredientes = ((MainActivity)getActivity()).receta.getIngredientes();
-                String titulo = ((MainActivity)getActivity()).receta.getTitulo();
-                String autor = ((MainActivity)getActivity()).receta.getAutor();
+                List<String> pasos = ((MainActivity) getActivity()).receta.getPasos();
+                List<String> ingredientes = ((MainActivity) getActivity()).receta.getIngredientes();
+                String titulo = ((MainActivity) getActivity()).receta.getTitulo();
+                String autor = ((MainActivity) getActivity()).receta.getAutor();
 
-                ((MainActivity) getActivity()).writeNewPost(titulo,autor,pasos,ingredientes);
+                ((MainActivity) getActivity()).writeNewPost(titulo, autor, pasos, ingredientes);
 
             }
+
+
 
 
         });
